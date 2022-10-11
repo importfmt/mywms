@@ -1,0 +1,9 @@
+FROM centos:7.9.2009
+MAINTAINER 26n119e
+
+EXPOSE 81
+WORKDIR /opt
+RUN mkdir static
+COPY index.html httpd.out /opt/
+COPY static static
+CMD ["/opt/httpd.out"]
